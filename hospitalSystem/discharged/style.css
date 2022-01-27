@@ -1,0 +1,27 @@
+.App {
+    text-align: center;
+  }
+table{
+    margin: auto;
+    border: 3px solid green;
+    /*border-collapse: collapse;*/
+    width: 60%;
+  }
+  
+  td{
+    padding: 15px;
+  }
+  input[type=text], [type=number]{
+    width: 100%;
+  }
+  button{
+      padding: 20px;
+      width: 100%;
+  }
+  button:hover{
+      cursor: pointer;
+  }
+  .link{
+    text-decoration: none;
+    color: black;
+}
