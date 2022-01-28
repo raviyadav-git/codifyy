@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "password";
-$dbname = "hospital";
+$dbname = "dbname";
 
 
 // Create connection
@@ -16,11 +16,11 @@ if ($conn->connect_error) {
   }
 
 // get the post records
-$patientName = $_POST['patient'];
+$customer = $_POST['patient'];
 $address = $_POST['address'];
 $addarcard = $_POST['addarcard'];
 $age = $_POST['result'];
-$sex = $_POST['gender'];
+$gender = $_POST['gender'];
 $weightAtBirth = $_POST['weightatbirth'];
 $diagnosis = $_POST['diagnosis'];
 $dateOfAdmission = $_POST['admission'];
@@ -29,8 +29,8 @@ $dateofDischarge = $_POST['discharge'];
 $weightDischarge= $_POST['weightdischarge'];
 
 // database insert SQL code
-$sql = "INSERT INTO `healthCare` (`patientName`, `address`, `addarcard`, `age`, `sex`, `weightAtBirth`, `diagnosis`, `dateOfAdmission`, `weightAdmission`, `dateofDischarge`, `weightDischarge`)
-VALUE ('$patientName','$address','$addarcard','$age','$sex','$weightAtBirth','$diagnosis','$dateOfAdmission','$weightAdmission','$dateofDischarge','$weightDischarge')";
+$sql = "INSERT INTO `healthCare` (`customer`, `address`, `addarcard`, `age`, `gender`, `weight(Birth)`, `diagnosis`, `admission(date)`, `admission(wt)`, `discharge(date)`, `discharge(wt)`)
+VALUE ('$customer','$address','$addarcard','$age','$gender','$weightAtBirth','$diagnosis','$dateOfAdmission','$weightAdmission','$dateofDischarge','$weightDischarge')";
 // insert in database 
 
 if ($conn->query($sql) === TRUE) {
