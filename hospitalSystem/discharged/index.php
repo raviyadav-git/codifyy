@@ -1,28 +1,16 @@
 <?php
 
-// require connection
-$servername = "localhost";
-$username = "root";
-$password = "password";
-$dbname = "hospital";
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
+require "config.php";
 
 // get the post records
+$aadhar = $_POST['aadharcard'];
 $summary = $_POST['caseSummary'];
 $treatment = $_POST['treatmentGiven'];
-$investagation = $_POST['investigate'];
+$investegate = $_POST['investigate'];
 
 // database insert SQL code
-$sql = "INSERT INTO `responseDetails` (`caseSummary`, `treatmentGiven`, `investigation`)
-VALUE ('$summary','$treatment','$investagation')";
+$sql = "INSERT INTO `responseDetails` (`aadharcard`,`summary`, `treatment`, `investigate`)
+VALUE ('$aadhar','$summary','$treatment','$investagate')";
 // insert in database 
 
 if ($conn->query($sql) === TRUE) {

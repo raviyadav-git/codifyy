@@ -29,7 +29,7 @@
 
     var calc_Age = yyyy - new Date(getDate);
     // console.log("Ending");
-    var ageInputField = document.getElementById('result').value = getage + " years";    
+    var ageInputField = document.getElementById('result').value = getage ;    
   }
 </script>
     <title>Health Care</title>
@@ -38,8 +38,8 @@
 <body>
   
     <div class="App">
-        <form action="index.php" method="post" class="form-check">
-         <table border='1'>
+        <form action="update.php" method="post" class="form-check">
+         <table>
            <thead>
              <tr>
                <td colspan="4"><h1>HealthCare</h1></td>
@@ -61,8 +61,8 @@
     
              <!-- Aadhar number -->
             <tr>
-                <td><label for = "aadhar">Aadhar: </label></td>
-                <td colspan='3'><input type='number' class="form-control" name="addarcard" id="addarcard"></input></td>
+                <td><label for = "aadharcard">Aadhar: </label></td>
+                <td colspan='3'><input type='number' class="form-control" name="aadharcard" id="aadharcard"></input></td>
             </tr>
 
             <!-- DOB -->
@@ -74,7 +74,7 @@
             <!-- Age -->
             <tr>
              <td><label for = "age">Age: </label></td>
-             <td colspan='3'><input type="number" class="form-control" name="result" id="result"/></td>
+             <td colspan='3'><input type="text" class="form-control" name="result" id="result"/></td>
             </tr>
 
            <!-- Gender -->
@@ -90,7 +90,7 @@
            <!-- Weight at birth -->
             <tr>
              <td><label for ="weightatbirth">Weight(at birth): </label></td>
-             <td colspan='3'><input type='number' class="form-control" name="weightatbirth" id="weightatbirth"></input></td>
+             <td colspan='3'><input type='float' class="form-control" name="weightatbirth" id="weightatbirth"></input></td>
             </tr>
             <tr>
                 
@@ -104,7 +104,7 @@
              <td><label for= "admission">Admission: </label></td>
              <td> <input type='date' name="admission" class="form-control" id="admission"></input></td>
              <td><label for= "weightadmission">(Wt.): </label></td>
-             <td><input type='number' name="weightadmission" class="form-control" id="weightadmission"></input></td>
+             <td><input type='float' name="weightadmission" class="form-control" id="weightadmission"></input></td>
             </tr>
 
           <!-- Date of discharge -->
@@ -112,7 +112,7 @@
              <td><label for="discharge">Discharge: </label></td>
              <td ><input type='date' name="discharge" class="form-control" id="discharge"></input></td>
              <td><label for =  "weightdischarge" >(Wt.): </label></td>
-             <td><input type='number' name="weightdischarge" class="form-control" id="weightdischarge"></input></td>
+             <td><input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input></td>
            </tr>   
       
       </tbody>
@@ -121,8 +121,8 @@
           
        <tr>
          <td colspan='4'>
-             <!-- button><a href="../../discharged.html">Submit<a></button>  -->
-            <button class="btn btn-success">Submit</button> 
+             <a href="../discharged/discharge.html"><button>Submit</button><a>
+            <!-- <button class="btn btn-success">Submit</button>  -->
          </td>
        </tr>
           
