@@ -24,7 +24,7 @@ $gender = $_POST['gender'];
 $weightAtBirth = $_POST['weightatbirth'];
 $diagnosis = $_POST['diagnosis'];
 $dateOfAdmission = $_POST['admission'];
-$weightAdmission = $_POST['weightaddmission'];
+$weightAdmission = $_POST['weightadmission'];
 $dateofDischarge = $_POST['discharge'];
 $weightDischarge= $_POST['weightdischarge'];
 
