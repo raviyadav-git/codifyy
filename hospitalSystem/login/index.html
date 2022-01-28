@@ -7,41 +7,29 @@
     <link rel="stylesheet" href="./style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-
     <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
   function showAge(){
-    console.log("Starting");
+    // console.log("Starting");
     var getDate = document.getElementById('DOB').value;
+
     var getDOBYear = (new Date(getDate)).getFullYear();
 
     var currentDate = new Date();
+
     var yyyy = currentDate.getFullYear();
 
     var getage = yyyy - getDOBYear;
-    // alert(getage);
-
-    
-
-    // alert(getDate.getFullYear())
 
     var calc_Age = yyyy - new Date(getDate);
-    // alert(calc_Age)
-    
-    
-    // alert(currentDate.getFullYear() + " " + currentDate.getMonth()+1 + " " + currentDate.getDate());
-    // alert(getDate);
-    console.log("Ending");
-    var ageInputField = document.getElementById('result').value = getage;
-    
+    // console.log("Ending");
+    var ageInputField = document.getElementById('result').value = getage;    
   }
 </script>
     <title>Health Care</title>
@@ -58,7 +46,7 @@
            </thead>
            <tbody>
             <tr>
-             <td><label>Patient's name: </label></td>
+             <td><label>Customer: </label></td>
              <td colspan='3'><input type='text' name="patient" id="patient"></input></td>
             </tr>
             <tr>
@@ -79,14 +67,14 @@
              <td colspan='3'><input type="number" name="result" id="result"/></td>
             </tr>
             <tr>
-             <td><label>Sex: </label></td>
+             <td><label>Gender: </label></td>
              <td colspan='3'>
               <input type='radio' value='male' name='gender'></input>Male
               <input type='radio' value='female' name='gender'></input>Female
              </td>
             </tr>
             <tr>
-             <td><label>Weight (at birth): </label></td>
+             <td><label>Weight(birth): </label></td>
              <td colspan='3'><input type='number' name="weightatbirth" id="weightatbirth"></input></td>
             </tr>
             <tr>
@@ -94,14 +82,14 @@
              <td colspan='3'><input type='text' name="diagnosis" id="diagnosis"></input></td>
             </tr>
             <tr>
-             <td><label>Date of admission: </label></td>
+             <td><label>Admission(date): </label></td>
              <td> <input type='date' name="admission" id="admission"></input></td>
              <td><label>(Wt.): </label></td>
              <td><input type='number' name="weightaddmission" id="weightaddmission"></input></td>
             </tr>
       
        <tr>
-         <td><label>Date of discharge: </label></td>
+         <td><label>Discharge(date): </label></td>
          <td ><input type='date' name="discharge" id="discharge"></input></td>
          <td><label>(Wt.): </label></td>
          <td><input type='number' name="weightdischarge" id="weightdischarge"></input></td>
@@ -112,8 +100,8 @@
       <tfoot>
        <tr>
          <td colspan='4'>
-          <!-- <button><a href="../discharged/discharge.html" >Submit</a></button> -->
-            <button>Submit</button>
+             <!-- button><a href="../../discharged.html">Submit<a></button>  -->
+            <button>Submit</button> 
          </td>
        </tr>
       </tfoot>
