@@ -29,7 +29,7 @@
 
     var calc_Age = yyyy - new Date(getDate);
     // console.log("Ending");
-    var ageInputField = document.getElementById('result').value = getage;    
+    var ageInputField = document.getElementById('result').value = getage + " years";    
   }
 </script>
     <title>Health Care</title>
@@ -59,7 +59,7 @@
                </tr>
             <tr>
                 <td><label>Date of Birth: </label></td>
-                <td colspan='2'><input type='date' id = "DOB" onclick = "showAge()"></input></td>
+                <td colspan='2'><input type='date' id = "DOB" onchange = "showAge()"></input></td>
                </tr>
                <tr>
             <tr>
