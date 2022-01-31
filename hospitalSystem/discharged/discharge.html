@@ -1,36 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Discharged</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+        <script>
+            function clrcase(){
+                document.getElementById('caseArea').value = '';
+            }
+
+            function clrtreat(){
+                document.getElementById('treatArea').value = '';
+            }
+
+            function clrinvest(){
+                document.getElementById('investArea').value = '';
+            }
+        </script>
+        <title>Discharge</title>
+    </head>
 <body>
-    <div class="App">
-        <form action="index.php" method="post">
-            <h1>Report</h1>
-            <table>
-                <tr>
-                    <td><label>Case Summary</label></td><td><textarea cols="50" rows="15" name="caseSummary"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label>Treatment Given</label></td><td><textarea cols="50" rows="15" name="treatmentGiven"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label>Investigation</label></td><td><textarea cols="50" rows="15" name="investigate"></textarea></td>
-                </tr>
-                <tfoot>
-                  <tr>
-                    <td colspan='4'>
-                        <!-- <button><a href="../login/login.html" class="link">Logout</a></button> -->
-                        <button>Logout</button>
-                     </td>
-                  </tr>
-                 </tfoot>
-            </table>
-        </form>
+    <!-- <div class="App">
+       
+    </div> -->
+
+    <div class='container-fluid'>
+
+        <div class='row'>
+            <div class='col-sm-3'>
+
+            </div>
+
+            <div class='col-sm-6'>
+                <form action="index.php" class='form-group' method="post">
+                   
+                    <table border='0'>
+                        <thead>
+                            <tr>
+                                <th colspan='2'>
+                                    <center>
+                                        <h1>
+                                            <b>Report</b>
+                                        </h1>
+                                    </center>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Aadhar</td>
+                                <td><input type='text' class='form-control' readonly placeholder="Your aadhar will show here"></td>
+                            </tr>
+
+                            <tr>
+                                <td><label>Case Summary</label></td>
+
+                                <td><textarea cols="50" rows="7" class='form-control' id='caseArea' name="caseSummary"></textarea>
+                                    <div id='clrbtn' onclick="clrcase()">Clear area</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Treatment Given</label></td>
+                                <td><textarea cols="50" rows="7" class='form-control' id='treatArea' name="treatmentGiven"></textarea>
+                                    <div id='clrbtn' onclick="clrtreat()">Clear area</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Investigation</label></td>
+                                <td><textarea cols="50" rows="7" class='form-control' id='investArea' name="investigate"></textarea>
+                                    <div id='clrbtn' onclick="clrinvest()">Clear area</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="discharge">Discharge: </label></td>
+                                <td ><input type='date' name="discharge" class="form-control" id="discharge"></input></td>
+                                
+                            </tr>  
+
+                            <tr>
+                                <td><label for =  "weightdischarge" >Weight (at discharge): </label></td>
+                                <td><input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input></td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                          <tr>
+                            <td colspan='2'>
+                                <button class='btn btn-success'>Submit</button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                              <td colspan='2'>
+                                <a href='' class='btn btn-danger'>Logout</a>
+                              </td>
+                          </tr>
+                         </tfoot>
+
+                    </table>
+                </form>
+                
+            </div>
+
+            <div class='col-sm-3'>
+                
+            </div>
+        </div>
+
     </div>
+
+
 </body>
 </html>

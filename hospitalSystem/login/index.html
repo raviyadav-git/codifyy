@@ -37,99 +37,132 @@
     
 <body>
   
-    <div class="App">
-        <form action="update.php" method="post" class="form-check">
-         <table>
-           <thead>
-             <tr>
-               <td colspan="4"><h1>HealthCare</h1></td>
-             </tr>
-           </thead>
-           <tbody>
-               
-            <!-- Name -->
-            <tr>
-             <td><label for = "patient">Name: </label></td>
-             <td colspan='3'><input type='text' class="form-control" name="patient" id="patient"></input></td>
-            </tr>
+    <!-- <div class="App">
         
-            <!-- Address -->
-            <tr>
-             <td><label for ="address">Address: </label></td>
-             <td colspan='3'><input type='text' class="form-control" name="address" id="address"></input></td>
-            </tr>
-    
-             <!-- Aadhar number -->
-            <tr>
-                <td><label for = "aadharcard">Aadhar: </label></td>
-                <td colspan='3'><input type='number' class="form-control" name="aadharcard" id="aadharcard"></input></td>
-            </tr>
+  </div> -->
 
-            <!-- DOB -->
-             <tr>
-                <td><label for='DOB'>Date of Birth: </label></td>
-                <td colspan='2'><input type='date' class="form-control" id = "DOB" onchange = "showAge()"></input></td>
+  <div class='container-fluid'>
+
+    <div class="row">
+      <div class='col-sm-3'>
+        <!-- <p>3 cols</p> -->
+      </div>
+  
+      <div class='col-sm-6'>
+
+        <form action="update.php" method="post" class="form-check">
+          <table border='0'>
+            <thead>
+              <tr>
+                <td colspan="4"><center><h1><b>Health Care</b><img src=""></h1></center></td>
               </tr>
-              
-            <!-- Age -->
-            <tr>
-             <td><label for = "age">Age: </label></td>
-             <td colspan='3'><input type="text" class="form-control" name="result" id="result"/></td>
-            </tr>
-
-           <!-- Gender -->
-            <tr>
-             <td><label for='gender'>Gender: </label></td>
-             <td colspan='3'>
-              <input type='radio' value='male' name='gender'></input>Male
-              <input type='radio' value='female' name='gender'></input>Female
-              <input type='radio' value='others' name='gender'></input>Others
-             </td>
-            </tr>
-
-           <!-- Weight at birth -->
-            <tr>
-             <td><label for ="weightatbirth">Weight(at birth): </label></td>
-             <td colspan='3'><input type='float' class="form-control" name="weightatbirth" id="weightatbirth"></input></td>
-            </tr>
-            <tr>
+            </thead>
+            <tbody>
                 
-           <!-- Diagnosis -->
-             <td><label for="diagnosis">Diagnosis: </label></td>
-             <td colspan='3'><input type='text' class="form-control" name="diagnosis" id="diagnosis"></input></td>
-            </tr>
+             
+             <tr>
+              <td><label for = "patient">Name: </label></td>
+              <td colspan='3'><input type='text' class="form-control" name="patient" id="patient"></input></td>
+             </tr>
+         
+             
+             <tr>
+              <td><label for ="address">Address: </label></td>
+              <td colspan='3'><input type='text' class="form-control" name="address" id="address"></input></td>
+             </tr>
+     
+              
+             <tr>
+                 <td><label for = "aadharcard">Aadhar: </label></td>
+                 <td colspan='3'><input type='number' class="form-control" name="aadharcard" id="aadharcard"></input></td>
+             </tr>
+ 
+             
+              <tr>
+                 <td><label for='DOB'>Date of Birth: </label></td>
+                 <td colspan='2'><input type='date' class="form-control" id = "DOB" onchange = "showAge()"></input></td>
+               </tr>
+               
+             
+             <tr>
+              <td><label for = "age">Age: </label></td>
+              <td colspan='3'><input type="text" class="form-control" name="result" id="result"/></td>
+             </tr>
+ 
+            
+             <tr>
+              <td><label for='gender'>Gender: </label></td>
+              <td colspan='3'>
+                <table>
+                  <tr>
+                    <td><input type='radio' value='male' name='gender' class="form-control" ></input>Male</td>
+                    <td><input type='radio' value='female' name='gender' class="form-control" ></input>Female</td>
+                    <td><input type='radio' value='others' name='gender' class="form-control" ></input>Others</td>
+                  </tr>
+                </table>
+              </td>
+             </tr>
+ 
+            
+             <tr>
+              <td><label for ="weightatbirth">Weight(at birth): </label></td>
+              <td colspan='3'><input type='float' class="form-control" name="weightatbirth" id="weightatbirth"></input></td>
+             </tr>
+             <tr>
+                 
+            
+              <td><label for="diagnosis">Diagnosis: </label></td>
+              <td colspan='3'><input type='text' class="form-control" name="diagnosis" id="diagnosis"></input></td>
+             </tr>
+ 
+            
+             <tr>
+              <td><label for= "admission">Admission: </label></td>
+              <td> <input type='date' name="admission" class="form-control" id="admission"></input></td>
+              <td><label for= "weightadmission">(Wt.): </label></td>
+              <td><input type='float' name="weightadmission" class="form-control" id="weightadmission"></input></td>
+             </tr>
+ 
+           
+            <!-- <tr>
+              <td><label for="discharge">Discharge: </label></td>
+              <td ><input type='date' name="discharge" class="form-control" id="discharge"></input></td>
+              <td><label for =  "weightdischarge" >(Wt.): </label></td>
+              <td><input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input></td>
+            </tr>    -->
+       
+       </tbody>
+       
+       <tfoot>
+           
+        <tr>
+          <td colspan='4'>
+              <a href="../discharged/discharge.html"><button class="btn btn-success">Submit</button><a>
+             
+          </td>
+        </tr>
+           
+        <tr>
+          <td colspan='4'>
+            <a href='#' class='btn btn-danger'>Logout</a>
+          </td>
+        </tr>
+       </tfoot>
+ 
+       </table>
 
-           <!-- Date of admission -->
-            <tr>
-             <td><label for= "admission">Admission: </label></td>
-             <td> <input type='date' name="admission" class="form-control" id="admission"></input></td>
-             <td><label for= "weightadmission">(Wt.): </label></td>
-             <td><input type='float' name="weightadmission" class="form-control" id="weightadmission"></input></td>
-            </tr>
+       
+     </form>
 
-          <!-- Date of discharge -->
-           <tr>
-             <td><label for="discharge">Discharge: </label></td>
-             <td ><input type='date' name="discharge" class="form-control" id="discharge"></input></td>
-             <td><label for =  "weightdischarge" >(Wt.): </label></td>
-             <td><input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input></td>
-           </tr>   
-      
-      </tbody>
-      
-      <tfoot>
-          
-       <tr>
-         <td colspan='4'>
-             <a href="../discharged/discharge.html"><button>Submit</button><a>
-            <!-- <button class="btn btn-success">Submit</button>  -->
-         </td>
-       </tr>
-          
-      </tfoot>
+     
+      </div>
+  
+      <div class='col-sm-3'>
+        <!-- <p>3 cols</p> -->
+      </div>
+    </div>
+    
 
-      </table>
-    </form>
   </div>
 </body>
 </html>

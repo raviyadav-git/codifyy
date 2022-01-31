@@ -1,27 +1,51 @@
 .App {
-    text-align: center;
-  }
-table{
-    margin: auto;
-    border: 3px solid green;
-    /*border-collapse: collapse;*/
-    width: 60%;
-  }
+  text-align: center;
+}
+
+body{
+  background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size:cover;
   
-  td{
-    padding: 15px;
-  }
-  input[type=text], [type=number]{
-    width: 100%;
-  }
-  button{
-      padding: 20px;
-      width: 100%;
-  }
-  button:hover{
-      cursor: pointer;
-  }
-  .link{
-    text-decoration: none;
-    color: black;
+}
+label{
+  font-size: large;
+}
+.col-sm-6{
+  background-color: rgb(241, 241, 241);
+  border-radius: 1%;
+  margin-top: 2%;
+}
+h1{
+  font-family: monospace;
+  color: green;
+  /* background: lightgreen; */
+}
+table{
+  margin: auto;
+}
+td{
+  padding: 15px;
+}
+input{
+  width: 100%;
+  
+}
+#clrbtn{
+  text-align: center;
+  padding: 15px;
+  color:white;
+  border-radius: 5px;
+  transition-duration: 0.2s;
+  background-color: #28a745 ;
+}
+#clrbtn:hover{
+  cursor: pointer;
+  background-color: #dc3545 ;
+}
+button, .btn-danger{
+  width: 100%;
+}
+.link{
+  text-decoration: none;
+  color: black;
 }
