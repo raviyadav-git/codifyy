@@ -18,7 +18,7 @@ label{
 h1{
   font-family: monospace;
   color: green;
-  background: lightgreen; 
+  /* background: lightgreen;  */
 }
 table{
   margin: auto;
