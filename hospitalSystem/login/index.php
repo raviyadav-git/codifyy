@@ -36,12 +36,12 @@
                         <tbody>
                             <tr>
                                 <td><label>User Name</label></td>
-                                <td><input type="text" name="uname" class='form-control' placeholder="User Name"></td>
+                                <td><input type="text" name="uname" class='form-control' placeholder="User Name" required></td>
                             </tr>
 
                             <tr>
                                 <td><label>Password</label></td>
-                                <td><input type="password" name="password" class='form-control' placeholder="Password"></td>
+                                <td><input type="password" name="password" class='form-control' placeholder="Password" required></td>
                             </tr>
                         </tbody>
 
@@ -50,15 +50,6 @@
                                 <td colspan="2"><button type="submit" class='btn btn-success w-100'>Login</button></td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                <?php if (isset($_GET['error'])) {
-                                    ?>
-                                        <p class="error"><?php echo $_GET['error']; ?></p>
-                                    <?php } 
-                                ?>
-                                </td>
-                            </tr>
                         </tfoot>
                     </table>
                     
