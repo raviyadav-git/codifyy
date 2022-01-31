@@ -26,8 +26,80 @@
             function clrinvest(){
                 document.getElementById('investArea').value = '';
             }
+
+            function printDiv() {
+                const aadharNum = document.getElementById("aadharNum").value;
+                const caseSum = document.getElementById("caseArea").value;
+                const treatment = document.getElementById("treatArea").value;
+                const invest = document.getElementById("investArea").value;
+                w = window.open();
+                w.document.write(
+                    `<div class='row'>
+                    <div class='col-sm-3'>
+                    
+                    </div>
+
+                    <div class='col-sm-6'>
+                        <hr/>
+                        <table style='margin: auto;'>
+                        <thead>
+                            <tr>
+                                <th colspan='2'><h2>Report</h2></th>
+                                
+                            </tr>    
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Aadhar: </td>
+                                <td>${aadharNum}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Case Summary: </td>
+                                <td>${caseSum}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Treatment given: </td>
+                                <td>${treatment}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Investigation: </td>
+                                <td>${invest}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div class='col-sm-3'>
+                        
+                    </div>
+                </div>
+
+                <hr/>
+                
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <p>Dated:</p>
+                    </div>
+                    
+                    <div class='col-sm-6'>
+                        
+                    </div>
+
+                    <div class='col-sm-3'>
+                        <p>Signature:</p>
+                    </div>
+                </div>`
+                );
+                w.print();
+                w.close();
+            }
         </script>
-        <title>Discharge</title>
+
+       <title>Discharge</title>
     </head>
 <body>
     <!-- <div class="App">
@@ -42,10 +114,17 @@
             </div>
 
             <div class='col-sm-6'>
+                
+
                 <form action="index.php" class='form-group' method="post">
-                   
+                    
                     <table border='0'>
                         <thead>
+                            <tr>
+                                <td colspan='2'>
+                                    <a class='btn btn-primary w-100' onclick="printDiv()" value="print a div!">Print this page</a>
+                                </td>
+                            </tr>
                             <tr>
                                 <th colspan='2'>
                                     <center>
@@ -60,7 +139,7 @@
                         <tbody>
                             <tr>
                                 <td>Aadhar</td>
-                                <td><input type='text' class='form-control' readonly placeholder="Your aadhar will show here"></td>
+                                <td><input type='text' class='form-control' id='aadharNum' value='Your aadhar will show here' readonly placeholder="Your aadhar will show here"></td>
                             </tr>
 
                             <tr>
