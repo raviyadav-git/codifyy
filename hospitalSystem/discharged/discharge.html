@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,36 @@
         }
 
         function printDiv() {
+=======
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+        <script>
+            function clrcase(){
+                document.getElementById('caseArea').value = '';
+            }
+
+            function clrtreat(){
+                document.getElementById('treatArea').value = '';
+            }
+
+            function clrinvest(){
+                document.getElementById('investArea').value = '';
+            }
+
+            function printDiv() {
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                 const aadharNum = document.getElementById("aadharNum").value;
                 const caseSum = document.getElementById("caseArea").value;
                 const treatment = document.getElementById("treatArea").value;
@@ -38,6 +69,10 @@
                     <div class='col-sm-3'>
                     
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                     <div class='col-sm-6'>
                         <hr/>
                         <table style='margin: auto;'>
@@ -47,19 +82,35 @@
                                 
                             </tr>    
                         </thead>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                         <tbody>
                             <tr>
                                 <td>Aadhar: </td>
                                 <td>${aadharNum}</td>
                             </tr>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                             <tr>
                                 <td>Case Summary: </td>
                                 <td>${caseSum}</td>
                             </tr>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                             <tr>
                                 <td>Treatment given: </td>
                                 <td>${treatment}</td>
                             </tr>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                             <tr>
                                 <td>Investigation: </td>
                                 <td>${invest}</td>
@@ -67,10 +118,18 @@
                         </tbody>
                     </table>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                     <div class='col-sm-3'>
                         
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                 <hr/>
                 
                 <div class='row'>
@@ -81,6 +140,10 @@
                     <div class='col-sm-6'>
                         
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                     <div class='col-sm-3'>
                         <p>Signature:</p>
                     </div>
@@ -89,10 +152,22 @@
                 w.print();
                 w.close();
             }
+<<<<<<< HEAD
     </script>
     <title>Discharge</title>
 </head>
 <body>
+=======
+        </script>
+
+       <title>Discharge</title>
+    </head>
+<body>
+    <!-- <div class="App">
+       
+    </div> -->
+
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
     <div class='container-fluid'>
 
         <div class='row'>
@@ -101,8 +176,15 @@
             </div>
 
             <div class='col-sm-6'>
+<<<<<<< HEAD
                 <form action="discharge.php" class='form-group' method="post">
                    
+=======
+                
+
+                <form action="index.php" class='form-group' method="post">
+                    
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                     <table border='0'>
                         <thead>
                             <tr>
@@ -123,7 +205,12 @@
 
                         <tbody>
                             <tr>
+<<<<<<< HEAD
                                 <td><label>aadharcard</label></td><td><input type="number" name="aadharcard" id="aadharcard" class='form-control' /></td>
+=======
+                                <td>Aadhar</td>
+                                <td><input type='text' class='form-control' id='aadharNum' value='Your aadhar will show here' readonly placeholder="Your aadhar will show here"></td>
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                             </tr>
 
                             <tr>
@@ -166,7 +253,11 @@
 
                           <tr>
                               <td colspan='2'>
+<<<<<<< HEAD
                                 <a href='../login/logout.php' class='btn btn-danger'>Logout</a>
+=======
+                                <a href='' class='btn btn-danger'>Logout</a>
+>>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
                               </td>
                           </tr>
                          </tfoot>
@@ -182,5 +273,7 @@
         </div>
 
     </div>
+
+
 </body>
 </html>
