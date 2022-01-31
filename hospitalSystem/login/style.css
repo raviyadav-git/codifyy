@@ -1,187 +1,29 @@
-body {
-
-    background: #91a716;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    height: 100vh;
-
-    flex-direction: column;
-
-}
-
-*{
-
-    font-family: cursive;
-
-    box-sizing: padding-box;
-
-}
-
-form {
-
-    width: 1000px;
-
-    border: 3px solid rgb(177, 142, 142);
-
-    padding: 20px;
-
-    background: rgb(85, 54, 54);
-
-    border-radius: 20px;
-
-}
-
-h2 {
-
-    text-align: center;
-<<<<<<< HEAD
-
-    margin-bottom: 40px;
-
-}
-
-input {
-
-    display: block;
-
-    border: 2px solid #ccc;
-
-    width: 95%;
-
-    padding: 10px;
-
-    margin: 10px auto;
-
-    border-radius: 5px;
-
-}
-
-label {
-
-    color: #888;
-
-    font-size: 18px;
-
-    padding: 10px;
-
-}
-
-button {
-
-    float: right;
-
-    background: rgb(35, 174, 202);
-
-    padding: 10px 15px;
-
-    color: #fff;
-
-    border-radius: 5px;
-
-    margin-right: 10px;
-
-    border: none;
-
-}
-
-button:hover{
-
-    opacity: .10;
-
-}
-
 .error {
-
-   background: #F2DEDE;
-
-   color: #0c0101;
-
-   padding: 10px;
-
-   width: 95%;
-
-   border-radius: 5px;
-
-   margin: 20px auto;
-
+  background: red;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  box-shadow: 0 0 5px red, 0 0 10px red, 0 0 40px red;
 }
-
-h1 {
-
-    text-align: center;
-
-    color: rgb(134, 3, 3);
-
+body{
+  background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size:cover;
 }
-
-a {
-
-    float: right;
-
-    background: rgb(183, 225, 233);
-
-    padding: 10px 15px;
-
-    color: #fff;
-
-    border-radius: 10px;
-
-    margin-right: 10px;
-
-    border: none;
-
-    text-decoration: none;
-
+label{
+  font-size: large;
 }
-
-a:hover{
-
-    opacity: .7;
-
-=======
-  }
-  body{
-    background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-    background-size:cover;
-  }
-  .col-sm-6{
-    background-color: rgb(241, 241, 241);
-    border-radius: 1%;
-    margin-top: 2%;
-    overflow: auto;
-  }
-  label{
-    font-size: large;
-  }
-  h1{
-    font-family: monospace;
-    color: green;
-    /* background: lightgreen; */
-  }
-table{
-    margin: auto;
-    /* border: 3px solid green; */
-    /*border-collapse: collapse;*/
-    /* width: 60%; */
-  }
-  
-  td{
-    padding: 15px;
-  }
-  input{
-    width: 100%;
-  }
-  button, .btn-danger{
-      /* padding: 10%; */
-      width: 100%;
-  }
-  .link{
-    text-decoration: none;
-    color: black;
->>>>>>> faa5988ff054f4e0869a8c6f8ed759e37ce9e559
+.col-sm-6{
+  background-color: rgb(241, 241, 241);
+  border-radius: 1%;
+  /* margin:auto; */
+  padding: 15%;
+}
+h1{
+  font-family: monospace;
+  color: green;
 }

@@ -14,7 +14,8 @@ $dateOfAdmission = $_POST['admission'];
 $weightAdmission = $_POST['weightadmission'];
 
 // database insert SQL code
-$sql= "INSERT INTO `healthCare` (`customer`, `address`, `aadharcard`, `age`, `gender`, `weight(Birth)`, `diagnosis`, `admission(date)`, `admission(wt)`) VALUE ('$customer','$address','$aadharcard','$age','$gender','$weightAtBirth','$diagnosis','$dateOfAdmission','$weightAdmission')";
+$sql= "INSERT INTO `healthCare` (`customer`, `address`, `aadharcard`, `age`, `gender`, `weight(Birth)`, `diagnosis`, `admission(date)`, `admission(wt)`)
+ VALUE ('$customer','$address','$aadharcard','$age','$gender','$weightAtBirth','$diagnosis','$dateOfAdmission','$weightAdmission')";
 // insert in database 
 
 if ($conn->query($sql) === TRUE) {
