@@ -34,11 +34,11 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
             if ($row['user_name'] === $uname && $row['password'] === $pass) {
                 echo "Logged in!";
 
-                $_SESSION['user_name'] = $row['user_name'];
-                $_SESSION['name'] = $row['name'];
-                $_SESSION['id'] = $row['id'];
+                // $_SESSION['user_name'] = $row['user_name'];
+                // $_SESSION['name'] = $row['name'];
+                // $_SESSION['id'] = $row['id'];
 
-                header("Location: ../customer/index.html");
+                header("Location: ../records_html.php");
                 exit();
             }
             else{
