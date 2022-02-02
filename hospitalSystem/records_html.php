@@ -15,30 +15,58 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
-  <!-- <script src="https://kit.fontawesome.com/11bfc88179.js" crossorigin="anonymous"></script> -->
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="./logic.js"></script>
+        <script src="https://kit.fontawesome.com/11bfc88179.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="./logic.js"></script> -->
 
         <!-- Partially working... -->
         <!-- <link rel="stylesheet" href="records.css"> -->
         
         <title>Customer Records</title>
 
-        <script>
+        <!-- <script>
             $(function () {
                 $("#nav").load("./navbar.html");
             });
-        </script>
+        </script> -->
 
 </head>
 
 <body>
 
  <!-- Navbar -->
-        <div id='nav'></div>
+        <!-- <div id='nav'></div> -->
+        <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark fixed-top'>
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="../hospitalSystem/records_html.php">
+            <b><h2>Health<span>Care<i class="fas fa-file-medical-alt"></i></span></h2></b>
+        </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="./customer/index.html">Admit</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../hospitalSystem/discharged/discharge_html.php">Discharge</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../hospitalSystem/login/logout.php">Logout</a>
+            </li>
+        </ul>
+        </div>
+
+        </nav>
         
 
-    <div class='container-fluid bg-dark mt-5'>
+    <div class='container-fluid bg-light mt-5'>
 
         <br/>
 <!-- ---------------------------------------------------------------------------------------- -->
@@ -67,7 +95,7 @@
                     <div class="row">
                         <div class='col-sm-12 text-center'>
 
-                            <button class='btn btn-primary w-25'>Show</button>
+                            <button class='btn btn-success w-25'>Show</button>
 
                         </div>
                     </div>  
@@ -134,17 +162,19 @@
 
 <!-- ---------------------------------------------------------------------------------------- -->
         <!-- 3rd Row for calendar -->
-        <div class='row calrow'>
+        <!-- <div class='row calrow'>
 
             <div class='col-sm-2'></div>
 
             <div class='col-sm-8 bg-light p-5' style='overflow: scroll;'>
-                <?php include 'hospitalCal.php' ?>
+                
+
+                // include 'hospitalCal.php' this next time within php
             </div>
 
             <div class='col-sm-2'></div>
             
-        </div>
+        </div> -->
 <!-- ---------------------------------------------------------------------------------------- -->
  
     </div>

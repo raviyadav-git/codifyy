@@ -14,8 +14,8 @@ if (isset($_POST['aadhar']) ) {
 
     $aadhar = validate($_POST['aadhar']);
 
-    // $sql = "SELECT * FROM `healthCare` WHERE `aadharcard`='$aadhar'";
-    $sql = "SELECT * FROM `healthCare`";
+    $sql = "SELECT * FROM `healthCare` WHERE `aadharcard`='$aadhar'";
+    // $sql = "SELECT * FROM `healthCare`";
 
         $result = mysqli_query($conn, $sql);
 

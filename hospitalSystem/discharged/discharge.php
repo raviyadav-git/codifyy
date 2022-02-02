@@ -10,12 +10,13 @@ $investegate = $_POST['investigate'];
 $dateofDischarge = $_POST['discharge'];
 $weightDischarge= $_POST['weightdischarge'];
 
+
+
 // database insert SQL code
-// $sql = "INSERT INTO `responseDetails` (`aadharcard`,`summary`, `treatment`, `investigate`, `discharge(date)`, `discharge(wt)`)
-// VALUE ('$aadhar','$summary','$treatment','$investagate','$dateofDischarge','$weightDischarge')";
 
 $sql = "INSERT INTO `responseDetails` (`aadharcard`, `summary`, `treatment`, `investigate`, `discharge(date)`, `discharge(wt)`) 
 VALUE ('$aadhar','$summary','$treatment','$investegate','$dateofDischarge','$weightDischarge')";
+
 
 // insert in database 
 
