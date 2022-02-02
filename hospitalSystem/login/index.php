@@ -14,9 +14,21 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="./logic.js"></script> -->
 
+
+    <!-- <script>
+            $(function () {
+                $("#nav").load("../navbar.html");
+            });
+    </script> -->
 </head>
 <body>
+
+ <!-- Navbar -->
+ <!-- <div id='nav'></div> -->
+
      <div class="container-fluid">
          <div class='row'>
              <div class='col-sm-3'>
