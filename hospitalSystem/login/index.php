@@ -30,6 +30,7 @@
  <!-- <div id='nav'></div> -->
 
      <div class="container-fluid">
+
          <div class='row'>
              <div class='col-sm-3'>
             
@@ -65,15 +66,13 @@
                         </tfoot>
                     </table>
                     
-                    
-
                 </form>
              </div>
 
-             <div class='col-sm-3'>
-                
-             </div>
+             <div class='col-sm-3'></div>
+
          </div>
+
      </div>
 </body>
 </html>
