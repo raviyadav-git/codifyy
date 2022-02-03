@@ -20,7 +20,7 @@ $sql= "INSERT INTO `healthCare` (`customer`, `address`, `aadharcard`, `age`, `ge
 
 if ($conn->query($sql) === TRUE) {
     echo '<script> alert("successfully")</script>';
-    header('Location: ../discharged/discharge.html');
+    header('Location: ../discharged/discharge_html.php');
   } else {
     echo '<script> alert("Error")</script>';
     // echo "Error: " . $sql . "<br>" . $conn->error;
