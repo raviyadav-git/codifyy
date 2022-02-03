@@ -4,7 +4,8 @@
 <head>
 
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="stylesheet" href='style.css'>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -14,65 +15,49 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="./logic.js"></script> -->
 
-
-    <!-- <script>
-            $(function () {
-                $("#nav").load("../navbar.html");
-            });
-    </script> -->
+    <script src="https://kit.fontawesome.com/11bfc88179.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 
  <!-- Navbar -->
  <!-- <div id='nav'></div> -->
-
+<div class='cover'>
      <div class="container-fluid">
 
          <div class='row'>
-             <div class='col-sm-3'>
-            
-             </div>
 
-             <div class='col-sm-6'>
+             <!-- Main center column -->
+             <div class='col-sm-4 offset-sm-4 text-center bg-light d-flex justify-content-center'>
+
                 <form action="login.php" method="post" class='form-group'>
 
-                    <table border='0' class="table">
-                        <thead>
-                            <tr>
-                                <th colspan='2'><center><h1>Login</h1></center></th>
-                            </tr>
-                        </thead>
+                    <h1>Health<span>Care<i class="fas fa-file-medical-alt"></i></span></h1>
 
-                        <tbody>
-                            <tr>
-                                <td><label>User Name</label></td>
-                                <td><input type="text" name="uname" class='form-control' placeholder="User Name" required></td>
-                            </tr>
+                    <h3>Login</h3>
+                    <hr>
 
-                            <tr>
-                                <td><label>Password</label></td>
-                                <td><input type="password" name="password" class='form-control' placeholder="Password" required></td>
-                            </tr>
-                        </tbody>
+                    <div class='form-group'>
+                        <label class="sr-only">Username</label>
+                        <input type="text" name="uname" class='form-control' placeholder="User Name" required>
+                    </div>
 
-                        <tfoot>
-                            <tr>
-                                <td colspan="2"><button type="submit" class='btn btn-success w-100'>Login</button></td>
-                            </tr>
+                    <div class='form-group'>
+                        <label class="sr-only">Password</label>
+                        <input type="password" name="password" class='form-control' placeholder="Password" required>
+                    </div>
 
-                        </tfoot>
-                    </table>
-                    
+                    <hr>
+                    <button type="submit" class='btn btn-success w-50'>Login</button>
+                
                 </form>
+
              </div>
 
-             <div class='col-sm-3'></div>
-
-         </div>
+           </div>
 
      </div>
+</div>
 </body>
 </html>
