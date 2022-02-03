@@ -1,0 +1,30 @@
+img{
+   width: 100%;
+   margin-top: 30%;
+}
+form{
+    margin-top: 20%;
+}
+p{
+    text-align: center;
+    font-size: 50px;
+}
+table{
+    border: 3px solid green; 
+    border-collapse: collapse;
+   margin: auto;
+   width: 100%;
+}
+td{
+    padding: 15px;
+  }
+  input[type=text]{
+    width: 100%;
+  }
+  button{
+      padding: 20px;
+      width: 100%;
+  }
+  button:hover{
+    cursor: pointer;
+}

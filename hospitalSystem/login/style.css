@@ -1,0 +1,29 @@
+.error {
+  background: red;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  margin: auto;
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  box-shadow: 0 0 5px red, 0 0 10px red, 0 0 40px red;
+}
+body{
+  background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size:cover;
+}
+label{
+  font-size: large;
+}
+.col-sm-6{
+  background-color: rgb(241, 241, 241);
+  border-radius: 1%;
+  /* margin:auto; */
+  padding: 15%;
+}
+h1{
+  font-family: monospace;
+  color: green;
+}
