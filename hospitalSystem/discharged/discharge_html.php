@@ -1,4 +1,10 @@
-<?php include '../records.php'?>
+<?php
+  session_start();
+
+  if(!isset($_SESSION["user_name"])){
+      header("Location: ../login/index.php");
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

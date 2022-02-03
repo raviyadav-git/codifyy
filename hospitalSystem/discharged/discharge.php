@@ -22,7 +22,7 @@ VALUE ('$aadhar','$summary','$treatment','$investegate','$dateofDischarge','$wei
 
 if ($conn->query($sql) === TRUE) {
   echo '<script> alert("successfully")</script>';
-  header('Location: ../customer/index.html');
+  header('Location: ../customer/index.php');
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }

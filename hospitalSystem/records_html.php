@@ -1,3 +1,11 @@
+<?php
+  session_start();
+
+  if(!isset($_SESSION["user_name"])){
+      header("Location: ../hospitalSystem/login/index.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +60,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" href="./customer/index.html">Admit</a>
+            <a class="nav-link" href="./customer/index.php">Admit</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="../hospitalSystem/discharged/discharge_html.php">Discharge</a>
