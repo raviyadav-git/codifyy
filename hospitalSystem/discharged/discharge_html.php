@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
   session_start();
 
@@ -6,6 +7,11 @@
   }
 ?>
 
+||||||| constructed merge base
+<?php include '../records.php'?>
+
+=======
+>>>>>>> Made responsive!
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +32,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
         <script src="https://kit.fontawesome.com/11bfc88179.js" crossorigin="anonymous"></script>
-        <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="./logic.js"></script> -->
+        
 
         <script>
             function clrcase(){
@@ -49,7 +54,7 @@
                 const treatment = document.getElementById("treatArea").value;
                 const invest = document.getElementById("investArea").value;
                 const DischargeDate = document.getElementById("discharge").value;
-                
+                // const a = $sql;
 
                 w = window.open();
                 w.document.write(`
@@ -160,22 +165,18 @@
                 w.close();
             }
 
+            
         </script>
 
     <title>Discharge</title>
 
-    <!-- <script>
-        $(function() {
-                $("#nav").load("../navbar.html");
-            });
-    </script> -->
 
 </head>
 <body>
 
      <!-- Navbar -->
-     <!-- <div id='nav'></div> -->
-     <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark fixed-top'>
+     
+     <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark'>
 
         <!-- Brand -->
         <a class="navbar-brand" href="../records_html.php">
@@ -204,97 +205,65 @@
 
         </nav>
 
-    <div class='container-fluid mt-5'>
+<div class="cover">
+        <div class='container-fluid'>
 
         <div class='row'>
-            <div class='col-sm-3'>
 
-            </div>
+            <div class='col-sm-4 offset-sm-4 bg-light p-4'>
 
-            <div class='col-sm-6'>
-
-                
                 <form action="discharge.php" class='form-group' method="post">
-                    
-                    <table border='0'>
-                        <thead>
-                           
+                    <!-- ------------------------------------ -->
 
-                            <tr>
-                                <th colspan='2'><center><h1><b>Report</b></h1></center></th>
-                            </tr>
-                        </thead>
+                    <h1>Report</h1>
+                    <b><hr></b>
 
-                        <tbody>
-                            <tr>    
+                    <div class='form-group'>
+                        <label>Aadhar: </label>
+                        <input type='text' class='form-control' id='aadharNum' onchange="php()" name="aadharcard" >
+                    </div>
+                    <br>
+                    <div class='form-group'>
+                        <label>Case Summary</label>
+                        <textarea cols="50" rows="7" class='form-control' id='caseArea' name="caseSummary"></textarea>
+                        <div id='clrbtn' class='p-1' onclick="clrcase()">Clear area
+                    </div>
+                    <br>
+                    <div class='form-group'>
+                        <label>Treatment Given</label>
+                        <textarea cols="50" rows="7" class='form-control' id='treatArea' name="treatmentGiven"></textarea>
+                        <div id='clrbtn' class='p-1' onclick="clrtreat()">Clear area
+                    </div>
+                    <br>
+                    <div class='form-group'>
+                        <label>Investigation</label>
+                        <textarea cols="50" rows="7" class='form-control' id='investArea' name="investigate"></textarea>
+                        <div id='clrbtn' class='p-1' onclick="clrinvest()">Clear area
+                    </div>
+                    <br>
+                    <div class='form-group'>
+                        <label>Discharge: </label>
+                        <input type='date' name="discharge" class="form-control" id="discharge"></input>
+                    </div>
+                    <br>
+                    <div class='form-group'>
+                        <label>Weight @ discharge:</label>
+                        <input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input>
+                    </div>
 
-                              <td>Aadhar</td>
-                                <td><input type='text' class='form-control' id='aadharNum' name="aadharcard" ></td> 
+                    <hr>
+                    <td colspan='2'><a class='btn btn-primary w-100' onclick="printDiv()" value="print a div!">Print this page</a>
+                    <br><br>
 
-                            </tr>
+                    <button class='btn btn-success'>Submit</button>
 
-                            <tr>
-                                <td><label>Case Summary</label></td>
-
-                                <td><textarea cols="50" rows="7" class='form-control' id='caseArea' name="caseSummary"></textarea>
-                                    <div id='clrbtn' class='p-1' onclick="clrcase()">Clear area</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label>Treatment Given</label></td>
-                                <td><textarea cols="50" rows="7" class='form-control' id='treatArea' name="treatmentGiven"></textarea>
-                                    <div id='clrbtn' class='p-1' onclick="clrtreat()">Clear area</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label>Investigation</label></td>
-                                <td><textarea cols="50" rows="7" class='form-control' id='investArea' name="investigate"></textarea>
-                                    <div id='clrbtn' class='p-1' onclick="clrinvest()">Clear area</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><label for="discharge">Discharge: </label></td>
-                                <td ><input type='date' name="discharge" class="form-control" id="discharge"></input></td>
-                                
-                            </tr>  
-
-                            <tr>
-                                <td><label for =  "weightdischarge" >Weight (at discharge): </label></td>
-                                <td><input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input></td>
-                            </tr>
-                        </tbody>
-
-                        <tfoot>
-                            <tr>
-                                <td colspan='2'><a class='btn btn-primary w-100' onclick="printDiv()" value="print a div!">Print this page</a></td>
-                            </tr>
-                          <tr>
-                            <td colspan='2'>
-                                <div class="text-center">
-                                    <button class='btn btn-success'>Submit</button>
-                                </div>
-                                
-                            </td>
-                          </tr>
-
-
-                          <!-- <tr>
-                              <td colspan='2'>
-                                <a href='../login/logout.php' class='btn btn-danger'>Logout</a>
-
-                              </td>
-                          </tr> -->
-                         </tfoot>
-
-                    </table>
+                    <!-- ------------------------------------ -->
+                   
                 </form>
                 
             </div>
-
-            <div class='col-sm-3'>
-                
-            </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-.error {
+/* .error {
   background: red;
   color: white;
   padding: 15px;
@@ -9,21 +9,29 @@
   word-spacing: 5px;
   letter-spacing: 2px;
   box-shadow: 0 0 5px red, 0 0 10px red, 0 0 40px red;
+} */
+html, body{
+  height: 100%;
+  
 }
-body{
-  background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-  background-size:cover;
+.cover{
+  height: 100%;
+  background-color: #28a745;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
 }
-label{
-  font-size: large;
-}
-.col-sm-6{
+.bg-light{
   background-color: rgb(241, 241, 241);
-  border-radius: 1%;
+  box-shadow: 10px 10px 10px green;
   /* margin:auto; */
+  border-radius: 5px;
   padding: 15%;
 }
-h1{
+/* .row{
+  margin-top: 20%;
+} */
+h3{
   font-family: monospace;
   color: green;
 }
