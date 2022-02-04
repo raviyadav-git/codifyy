@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
   session_start();
 
@@ -7,11 +6,6 @@
   }
 ?>
 
-||||||| constructed merge base
-<?php include '../records.php'?>
-
-=======
->>>>>>> Made responsive!
 <!DOCTYPE html>
 <html lang="en">
 
