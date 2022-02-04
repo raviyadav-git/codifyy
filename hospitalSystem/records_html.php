@@ -28,7 +28,7 @@
         <script src="./logic.js"></script> -->
 
         <!-- Partially working... -->
-        <!-- <link rel="stylesheet" href="records.css"> -->
+        <link rel="stylesheet" href="records.css">
         
         <title>Customer Records</title>
 
@@ -44,7 +44,7 @@
 
  <!-- Navbar -->
         <!-- <div id='nav'></div> -->
-        <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark fixed-top'>
+        <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark sticky-top'>
 
         <!-- Brand -->
         <a class="navbar-brand" href="../hospitalSystem/records_html.php">
@@ -74,7 +74,7 @@
         </nav>
         
 
-    <div class='container-fluid bg-light mt-5'>
+    <div class='container-fluid bg-light mt-5 mainRow'>
 
         <br/>
 <!-- ---------------------------------------------------------------------------------------- -->
@@ -186,5 +186,7 @@
 <!-- ---------------------------------------------------------------------------------------- -->
  
     </div>
+
+    
 </body>
 </html>
