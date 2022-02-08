@@ -17,9 +17,14 @@
 
     $aadhar = validate($_POST['aadhar']);
 
-    $sql = "SELECT * FROM `healthCare` WHERE `aadharcard`='$aadhar'";
+    // $sql = "SELECT * FROM `healthCare` WHERE `aadharcard`='$aadhar'";
     // $sql = "SELECT * FROM `healthCare`";
 
+    $sql = "SELECT healthCare.`customer`, healthCare.`address`, healthCare.`aadharcard`, healthCare.`age`, healthCare.`gender`, healthCare.`weight(Birth)`, healthCare.`diagnosis`, healthCare.`admission(date)`, healthCare.`admission(wt)`, responseDetails.`summary`, responseDetails.`treatment`, responseDetails.`investigate`, responseDetails.`discharge(date)`, responseDetails.`discharge(wt)`
+    FROM healthCare
+    INNER JOIN responseDetails
+    WHERE healthCare.aadharcard = '$aadhar' AND responseDetails.aadharcard='$aadhar';";
+    
         $result = mysqli_query($conn, $sql);
 
         // function buildTable(){
@@ -83,6 +88,19 @@
         
 
         <script>
+            function displaymessage(){
+
+                var af = document.getElementById('aadharNum').value;
+                var cs = document.getElementById('caseArea').value;
+                var tg = document.getElementById('treatArea').value;
+                var In = document.getElementById('investArea').value;
+                var ddate = document.getElementById('discharge').value;
+                var dwt = document.getElementById('weightdischarge').value;
+
+                if(af && cs && tg && In && ddate && dwt)
+                    document.getElementById('confirmMessage').innerHTML = "Patient details has been saved successfully!<br/>You can print now.";
+
+            }
             function clrcase(){
                 document.getElementById('caseArea').value = '';
             }
@@ -268,46 +286,51 @@
 
                     <div class='form-group'>
                         <label>Aadhar: </label>
-                        <input type='text' class='form-control' id='aadharNum' onchange="php()" name="aadharcard" >
+                        <input type='text' class='form-control' id='aadharNum' onchange="php()" name="aadharcard" required>
                     </div>
                     <br>
                     <div class='form-group'>
                         <label>Case Summary</label>
-                        <textarea cols="50" rows="7" class='form-control' id='caseArea' name="caseSummary"></textarea>
+                        <textarea cols="50" rows="7" class='form-control' id='caseArea' name="caseSummary" required></textarea>
                         <div id='clrbtn' class='p-1' onclick="clrcase()">Clear area
                     </div>
                     <br>
                     <div class='form-group'>
                         <label>Treatment Given</label>
-                        <textarea cols="50" rows="7" class='form-control' id='treatArea' name="treatmentGiven"></textarea>
+                        <textarea cols="50" rows="7" class='form-control' id='treatArea' name="treatmentGiven" required></textarea>
                         <div id='clrbtn' class='p-1' onclick="clrtreat()">Clear area
                     </div>
                     <br>
                     <div class='form-group'>
                         <label>Investigation</label>
-                        <textarea cols="50" rows="7" class='form-control' id='investArea' name="investigate"></textarea>
+                        <textarea cols="50" rows="7" class='form-control' id='investArea' name="investigate" required></textarea>
                         <div id='clrbtn' class='p-1' onclick="clrinvest()">Clear area
                     </div>
                     <br>
                     <div class='form-group'>
                         <label>Discharge: </label>
-                        <input type='date' name="discharge" class="form-control" id="discharge"></input>
+                        <input type='date' name="discharge" class="form-control" id="discharge" required></input>
                     </div>
                     <br>
                     <div class='form-group'>
                         <label>Weight @ discharge:</label>
-                        <input type='float' name="weightdischarge" class="form-control" id="weightdischarge"></input>
+                        <input type='float' name="weightdischarge" class="form-control" id="weightdischarge" required></input>
                     </div>
 
-                    <hr>
-                    <td colspan='2'><a class='btn btn-primary w-100' onclick="printDiv()" value="print a div!">Print this page</a>
-                    <br><br>
+                    <!-- <button class='btn btn-success' onclick="displaymessage()">Submit</button><br/><br/> -->
 
-                    <button class='btn btn-success'>Submit</button>
+                    <input type=submit class='btn btn-success' value='Print & Submit' />
+
+                    <div id='confirmMessage'></div>
 
                     <!-- ------------------------------------ -->
                    
                 </form>
+                <hr>
+
+                <!-- <form action='template.php' method="post">
+                    <button class='btn btn-primary w-100' name='printbtn'>Print this page</button>
+                </form> -->
                 
             </div>
         </div>
