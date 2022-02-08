@@ -106,7 +106,7 @@ function showAge(){
 
           <div class="form-group">
             <label>Address: </label>
-            <input type='text' class="form-control" name="aadharcard" id="aadharcard"></input>
+            <input type='text' class="form-control" name="address" id="address"></input>
           </div>
 
           <div class="form-group">
