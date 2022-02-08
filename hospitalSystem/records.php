@@ -14,8 +14,12 @@ if (isset($_POST['aadhar']) ) {
 
     $aadhar = validate($_POST['aadhar']);
 
-    $sql = "SELECT * FROM `healthCare` WHERE `aadharcard`='$aadhar'";
+    // $sql = "SELECT * FROM `healthCare` WHERE `aadharcard`='$aadhar'";
     // $sql = "SELECT * FROM `healthCare`";
+    $sql = "SELECT healthCare.`customer`, healthCare.`address`, healthCare.`aadharcard`, healthCare.`age`, healthCare.gender,healthCare.`weight(birth)`, healthCare.`diagnosis`, healthCare.`admission(date)`, healthCare.`admission(wt)`, responseDetails.`summary`, responseDetails.`treatment`, responseDetails.`investigate`, responseDetails.`discharge(date)`, responseDetails.`discharge(wt)`
+            FROM healthCare
+            INNER JOIN responseDetails
+            WHERE healthCare.aadharcard = $aadhar AND responseDetails.aadharcard= $aadhar";
 
         $result = mysqli_query($conn, $sql);
 
@@ -25,7 +29,7 @@ if (isset($_POST['aadhar']) ) {
                     <thead class='thead thead-dark'>
                         <tr>
 
-                            <th>Id</th>
+                            
                             <th>Customer Name</th>
                             <th>Address</th>
                             <th>Aadhar</th>
@@ -35,6 +39,11 @@ if (isset($_POST['aadhar']) ) {
                             <th>Diagnosis</th>
                             <th>Date of Admission</th>
                             <th>Weight at Admission</th>
+                            <th>Summary</th>
+                            <th>Treatment</th>
+                            <th>Investigate</th>
+                            <th>Date of discharge</th>
+                            <th>Wt. at discharge</th>
                             
                         </tr>
                     </thead>
