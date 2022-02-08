@@ -95,6 +95,7 @@ function showAge(){
       <div class='col-md-4 offset-md-4 p-4'>
 
         <form action="customer.php" method="post" class="form-check">
+          
           <!--  ---------------------------------------------------->
           <h3>Health Care</h3>
           <hr>
@@ -106,7 +107,7 @@ function showAge(){
 
           <div class="form-group">
             <label>Address: </label>
-            <input type='text' class="form-control" name="aadharcard" id="aadharcard"></input>
+            <input type='text' class="form-control" name="address" id="address"></input>
           </div>
 
           <div class="form-group">
