@@ -2,7 +2,7 @@
   session_start();
 
   if(!isset($_SESSION["user_name"])){
-      header("Location: ../login/index.php");
+      header("Location: index.php");
   }
 ?>
 
@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="customer.css">
+  <link rel="stylesheet" href="./customer/customer.css">
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -56,33 +56,7 @@ function showAge(){
 <body>
 
    <!-- Navbar -->
-   <!-- <div id='nav'></div> -->
-   <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark'>
-
-    <!-- Brand -->
-    <a class="navbar-brand" href="../records_html.php">
-      <b><h2>Health<span>Care<i class="fas fa-file-medical-alt"></i></span></h2></b>
-    </a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="../customer/index.php">Admit</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="../discharged/discharge_html.php">Discharge</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="../login/logout.php">Logout</a>
-        </li>
-    </ul>
-    </div>
+  <?php require "navbar.php"?>
 
     </nav>
 
@@ -94,7 +68,7 @@ function showAge(){
   
       <div class='col-md-4 offset-md-4 p-4'>
 
-        <form action="customer.php" method="post" class="form-check">
+        <form action="./customer/customer.php" method="post" class="form-check">
           
           <!--  ---------------------------------------------------->
           <h3>Health Care</h3>

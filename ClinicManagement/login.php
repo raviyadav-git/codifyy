@@ -1,7 +1,7 @@
 <?php 
 
 session_start(); 
-include "db_conn.php";
+include "config.php";
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
     function validate($data){
@@ -38,7 +38,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['id'] = $row['id'];
 
-                header("Location: ../records_html.php");
+                header("Location: records_html.php");
                 exit();
             }
             else{

@@ -2,7 +2,7 @@
   session_start();
 
   if(!isset($_SESSION["user_name"])){
-      header("Location: ../hospitalSystem/login/index.php");
+      header("Location: index.php");
   }
 ?>
 
@@ -29,7 +29,14 @@
 
         <!-- Partially working... -->
         <link rel="stylesheet" href="records.css">
-        
+        <style>
+            .mainRow{
+            box-shadow: 10px 10px 10px green;
+            }
+            body{
+            background-color: #87eb9f;
+            }
+        </style>
         <title>Customer Records</title>
 
         <!-- <script>
@@ -43,35 +50,7 @@
 <body>
 
  <!-- Navbar -->
-        <!-- <div id='nav'></div> -->
-        <nav id='navbar' class='navbar navbar-expand-sm bg-success navbar-dark sticky-top'>
-
-        <!-- Brand -->
-        <a class="navbar-brand" href="../hospitalSystem/records_html.php">
-            <b><h2>Health<span>Care<i class="fas fa-file-medical-alt"></i></span></h2></b>
-        </a>
-
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link" href="./customer/index.php">Admit</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../hospitalSystem/discharged/discharge_html.php">Discharge</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../hospitalSystem/login/logout.php">Logout</a>
-            </li>
-        </ul>
-        </div>
-
-        </nav>
+        <?php require "navbar.php"?>
         
 
     <div class='container-fluid bg-light mt-5 mainRow'>
