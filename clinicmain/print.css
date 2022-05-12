@@ -1,0 +1,11 @@
+@page
+{
+
+    margin: 10px;
+}
+
+#print-btn {
+display: none;
+visibility: none;
+
+}

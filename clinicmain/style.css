@@ -1,0 +1,70 @@
+.App {
+    text-align: center;
+ height: 100% ;
+  }
+  .formbg {
+  width: 600px;
+
+  }
+table{
+    margin: auto;
+    border-radius: 10px;
+    /*border-collapse: collapse;*/
+    width: 100%;
+
+  }
+
+
+  td{
+    padding: 10px;
+
+  }
+  input[type=text], [type=number]{
+    width: 100%;
+  }
+  button{
+      padding: 20px;
+      width: 100%;
+  }
+  button:hover{
+      cursor: pointer;
+  }
+  .link{
+    text-decoration: none;
+    color: black;
+}
+p{
+    border: 1px solid grey;
+}
+.tabledata {
+ background-color: #eef5f5;
+}
+
+.btnbg {
+  color: black;
+  text-align: center;
+  border-radius: 15px;
+  width: 100px;
+}
+.btnbg:hover {
+  background-color: #1aad46;
+  color: white;
+}
+
+.jumbotron {
+  background-size: 100% 100%;
+}
+
+
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+    opacity: 0.6;
+}
+
+div.transbox  p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
