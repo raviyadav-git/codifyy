@@ -250,7 +250,12 @@ if($result){
       <div class="col-md-4"></div>
       <div class="col-md-4"></div>
     </div>
-   <button class="btn btn-success" name="submit" type="submit">Update</button>
+   <button 
+   class="btn btn-success" 
+   name="submit" 
+   type="submit"
+   
+   >Update</button>
   </form>
   <?php
     if(isset($_POST['submit'])){
@@ -314,22 +319,15 @@ if($result){
       `lft`='$plft' 
       WHERE `patient_id`='$id'";
 
-      if ($conn->query($sql2) === TRUE) {
+      if ($conn->query($sql2) && $conn->query($sql3)  === TRUE) {
         
-        header("location:list.php");
+        echo '<meta http-equiv="refresh" content="0">';
       } else {
 
-        echo $sql2;
-      }
-
-      if ($conn->query($sql3) === TRUE) {
-        // echo $sql2;
-        header("location:list.php");
-      } else {
-
-        echo $sql3;
+        echo $sql2, $sql3;
       }
     }
+    
   ?>
 </body>
 
