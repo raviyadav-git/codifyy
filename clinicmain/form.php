@@ -29,6 +29,8 @@ include 'navbar.php';
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <title>Raikhy Hospital</title>
 </head>
@@ -73,24 +75,71 @@ include 'navbar.php';
              <td>Weight (at Discharge)<input type='float' name="weightdischarge" class="form-control" id="weightdischarge" required></input></td>           
             </tr>
            <tr>
-             <td colspan='2'><input type='text' class="form-control" name="diagnosis" id="diagnosis" required placeholder="Diagnosis"></input></td>
-             <td colspan="2"><input type='text' class="form-control" name="caseSummary" id="casesummary" required placeholder="Case Summary"></input></td>
+             <td colspan='2'>Diagnosis<input type='text' class="form-control" name="diagnosis" id="diagnosis" required placeholder="Diagnosis"></input><br>
+             <button onclick="voice_diag()" class="btn btn-primary" style="padding: 12px 16px; width: 20%;"><i class="fa fa-microphone" aria-hidden="true"></i></button></td>
+             <td colspan="2">Case Summary<input type='text' class="form-control" name="caseSummary" id="casesummary" required placeholder="Case Summary"></input><br>
+             <button onclick="voice()"      class="btn btn-primary" style="padding: 12px 16px; width: 20%;"><i class="fa fa-microphone" aria-hidden="true"></i></button></td>
 
             </tr>
             <tr>
               <td>
-              <td colspan="2">Treatment Given<input type='text' class="form-control" name="treatmentGiven" id="treatment" required placeholder="Treatment Given"></input></td>
+              <td colspan="2">Treatment Given<input type='text' class="form-control" name="treatmentGiven" id="treatment" required placeholder="Treatment Given"></input><br>
+              <button onclick="voice_treat()"      class="btn btn-primary" style="padding: 12px 16px; width: 20%;"><i class="fa fa-microphone" aria-hidden="true"></i></button></td>
+
 
               </td>
             </tr>
       </tbody>
       </table>
-      
+      <br>
       <button type="submit" class="btn btn-primary" style="width: 200px;">NEXT</button>
 
     </form>
       </div>
   </div>
+
+  
+  <script>
+        function voice_diag(){
+            var recognition= new webkitSpeechRecognition();
+            recognition.lang="en-GB";
+            recognition.onresult= function(event){
+                console.log(event);
+                document.getElementById("diagnosis").value= 
+                    event.results[0][0].transcript;
+
+            }
+            recognition.start();
+        }
+    </script>
+  
+  <script>
+        function voice(){
+            var recognition= new webkitSpeechRecognition();
+            recognition.lang="en-GB";
+            recognition.onresult= function(event){
+                console.log(event);
+                document.getElementById("casesummary").value= 
+                    event.results[0][0].transcript;
+
+            }
+            recognition.start();
+        }
+    </script>
+
+<script>
+        function voice_treat(){
+            var recognition= new webkitSpeechRecognition();
+            recognition.lang="en-GB";
+            recognition.onresult= function(event){
+                console.log(event);
+                document.getElementById("treatment").value= 
+                    event.results[0][0].transcript;
+
+            }
+            recognition.start();
+        }
+    </script>
 
 </body>
 </html>
