@@ -20,11 +20,10 @@ $discharge_dt= $_POST['discharge_dt'];
 
 
 
-$sql= "INSERT INTO `mothers` (`mobile`, `name`, `address`, `age`, `weightbp`, `wdp`, `wgdp`, `hypertension`, `diabetes`,`thyroid`,`bp`, `admission_dt`, `discharge_dt`) VALUES ('$mobile', '$name', '$address', '$age', '$wightbp', '$wdp', '$wgdp', '$hypertension', '$diabetes', '$thyroid', '$bp', '$admission_dt', '$discharge_dt')";
+$sql= "INSERT INTO `mothers` (`mobile`, `name`, `address`, `age`, `weightbp`, `wdp`, `wgdp`, `hypertension`, `diabetes`,`thyroid`,`bp`, `admission_dt`, `discharge_dt`) VALUES ('$mobile', '$name', '$address', '$age', '$weightbp', '$wdp', '$wgdp', '$hypertension', '$diabetes', '$thyroid', '$bp', '$admission_dt', '$discharge_dt')";
 
 
 if ($conn->query($sql) === TRUE) {
-
     header('location:motherslist.php');
   } else {
 

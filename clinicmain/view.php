@@ -132,7 +132,7 @@ if($result){
 
      <tr>
      <td class="text-center"><h6 style="background-color: black;" class="text-light text-center">Weight at Birth </h6><?php echo $birthWt ?></td>
-     <td class="text-center"><h6 style="background-color: black;" class="text-light text-center">Height/Lenght </h6><?php echo $height ?></td>
+     <td class="text-center"><h6 style="background-color: black;" class="text-light text-center">Height/Length </h6><?php echo $height ?></td>
      <td class="text-center"><h6 style="background-color: black;" class="text-light text-center">Head Circumference </h6><?php echo $headcircum ?></td>
 
     </tr>

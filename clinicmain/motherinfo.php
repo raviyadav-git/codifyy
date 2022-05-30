@@ -46,7 +46,7 @@ include 'navbar.php';
             <tr>
              <td colspan='1'>Mobile<input type='number' class="form-control" name="mobile" id="mobile" required placeholder="Enter Mobile Number"></input></td>
              <td colspan='1'>Patient Name<input type='text' class="form-control" name="name" id="patient" required placeholder="Patient Name"></input></td>
-             <td colspan='1'>Address<input type='text' class="form-control" name="address" id="address" placeholder="Adress" required></input></td>
+             <td colspan='1'>Address<input type='text' class="form-control" name="address" id="address" placeholder="Address" required></input></td>
              <td colspan='1'>Age<input type="text" class="form-control" name="age" id="result" placeholder="Example:  29 Years"/></td>
 
 

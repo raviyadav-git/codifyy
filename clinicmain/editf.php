@@ -45,7 +45,7 @@ if($result){
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -126,6 +126,7 @@ if($result){
             </table>
             <br>
             <button type="submit" name="submit" class="btn btn-success">Update</button>
+            <a id="back" href="motherslist.php" style="margin-top: 2px;display: flex;justify-content: center;background: blue;padding: 9px;color:white;">Back</a>
         </form>
     </div>
     <?php
@@ -159,9 +160,10 @@ if($result){
            `discharge_dt`='$m_dis_date' 
            WHERE `m_id`='$id'";
            
-           if ($conn->query($sql2) === TRUE) {
-        
-            header("location:motherslist.php");
+           
+           if ($conn->query($sql2)  === TRUE) {
+
+            echo '<meta http-equiv="refresh" content="0">';
           } else {
     
             echo $sql2;

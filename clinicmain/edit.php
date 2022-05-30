@@ -256,6 +256,7 @@ if($result){
    type="submit"
    
    >Update</button>
+   <a id="back" href="list.php" style="margin-top: 2px;display: flex;justify-content: center;background: blue;padding: 9px;color:white;">Back</a>
   </form>
   <?php
     if(isset($_POST['submit'])){
